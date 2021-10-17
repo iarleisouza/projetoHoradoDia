@@ -38,7 +38,7 @@ footer {
     <header>
         <h1>Hora do dia</h1>
     </header>
-    <section>
+    <section id="container">
         <div id="msg">
             Aqui vai aparecer a mensagem.
         </div>
@@ -51,9 +51,10 @@ footer {
     </footer>
     <script>
       var msg = document.getElementById('msg')
+      var section = document.getElementById('container') // alterar a cor do section
       var dia = Date()
-      var hora = get.Hour
-     //   var hora = 17
+    //  var hora = get.Hour
+       var hora = 1
       
       function Dia() {
        if (hora < 12) {
@@ -61,16 +62,21 @@ footer {
            document.body.style.fontSize = '32px'
            document.body.style.textAlign = 'center'
            document.body.style.backgroundColor = '#d68c6f'
+      
+       //    section.style.backgroundColor = '#d68c6f' // alterar a cor do section
+        
        }else if (hora < 18) {
            msg.innerHTML = 'Boa tarde'
            document.body.style.fontSize = '32px'
            document.body.style.textAlign = 'center'
            document.body.style.backgroundColor = '#b184429d'
+            //    section.style.backgroundColor = '#b184429d' // alterar a cor do section
        }else {
            msg.innerHTML = 'Boa noite'
            document.body.style.fontSize = '32px'
            document.body.style.textAlign = 'center'
            document.body.style.backgroundColor = 'black'
+            //    section.style.backgroundColor = '#black' // alterar a cor do section
        }
     }
     </script>

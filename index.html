@@ -4,9 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Hora do dia</title>
 </head>
-<body>
-    
+<style>
+body {
+  background: rgb(89, 89, 240);
+  font: normal 15pt Arial;
+}
+header {
+    color: white;
+    text-align: center;
+}
+section {
+background: white;
+border-radius: 10px;
+padding: 15px;
+width: 500px;
+margin: auto;
+box-shadow: 5px 5px 10px rgb(0, 0, 0);
+
+
+}
+footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
+</style>
+<body onload="Dia()">
+    <header>
+        <h1>Hora do dia</h1>
+    </header>
+    <section>
+        <div id="msg">
+            Aqui vai aparecer a mensagem.
+        </div>
+        <div>
+            <img src="" alt="">
+        </div>
+    </section>
+    <footer>
+        <p>&copy; IarleiSouza</p>
+    </footer>
+    <script>
+      var msg = document.getElementById('msg')
+      var dia = Date()
+      var hora = get.Hour
+        
+      
+      function Dia() {
+       if (hora < 12) {
+           msg.innerHTML = 'Bom dia'
+           document.body.style.textAlign = 'center'
+       }else if (hora < 18) {
+           msg.innerHTML = 'Boa tarde'
+           document.body.style.textAlign = 'center'
+       }else {
+           msg.innerHTML = 'Boa noite'
+           document.body.style.textAlign = 'center'
+       }
+    }
+    </script>
 </body>
 </html>

@@ -19,11 +19,14 @@ section {
 background: white;
 border-radius: 10px;
 padding: 15px;
-width: 500px;
+width: 700px;
 margin: auto;
 box-shadow: 5px 5px 10px rgb(0, 0, 0);
 
 
+}
+img {
+    width: 600px;
 }
 footer {
     color: white;
@@ -40,7 +43,7 @@ footer {
             Aqui vai aparecer a mensagem.
         </div>
         <div>
-            <img src="" alt="">
+            <img src="dia.png" alt="">
         </div>
     </section>
     <footer>
@@ -50,18 +53,24 @@ footer {
       var msg = document.getElementById('msg')
       var dia = Date()
       var hora = get.Hour
-        
+     //   var hora = 17
       
       function Dia() {
        if (hora < 12) {
            msg.innerHTML = 'Bom dia'
+           document.body.style.fontSize = '32px'
            document.body.style.textAlign = 'center'
+           document.body.style.backgroundColor = '#d68c6f'
        }else if (hora < 18) {
            msg.innerHTML = 'Boa tarde'
+           document.body.style.fontSize = '32px'
            document.body.style.textAlign = 'center'
+           document.body.style.backgroundColor = '#b184429d'
        }else {
            msg.innerHTML = 'Boa noite'
+           document.body.style.fontSize = '32px'
            document.body.style.textAlign = 'center'
+           document.body.style.backgroundColor = 'black'
        }
     }
     </script>
